@@ -2,9 +2,8 @@
 ## docker         ##
 ####################
 alias docker-rm-none="docker rmi $(docker images | grep none | awk '{print $3F}')"
-
-
-
+alias docker-stop-all="docker stop `docker container ls -aq`"
+alias docker-rm-all="docker container rm `docker container ls -aq`"
 
 #####################
 ## git             ##
